@@ -12,17 +12,32 @@ class FirstListScreen extends StatelessWidget {
             ListTile(
               title: const Text("Alpha"),
               subtitle: const Text("alpha"),
-              onTap: () => {},
+              onTap: () => {
+                Navigator.of(context).pushNamed(
+                  '/firstdetail',
+                  arguments: 'Alpha',
+                )
+              },
             ),
             ListTile(
               title: const Text("Beta"),
               subtitle: const Text("beta"),
-              onTap: () => {},
+              onTap: () => {
+                Navigator.of(context).pushNamed(
+                  '/firstdetail',
+                  arguments: 'Beta',
+                )
+              },
             ),
             ListTile(
               title: const Text("Gamma"),
               subtitle: const Text("gamma"),
-              onTap: () => {},
+              onTap: () => {
+                Navigator.of(context).pushNamed(
+                  '/firstdetail',
+                  arguments: 'Gamma',
+                )
+              },
             )
         ],
       ),

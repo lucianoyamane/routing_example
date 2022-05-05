@@ -1,23 +1,34 @@
 import 'package:flutter/material.dart';
 
 class FirstDetails extends StatelessWidget {
-  const FirstDetails({Key? key}) : super(key: key);
+
+  final String data;
+
+  const FirstDetails({Key? key, required this.data}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 400,
-      child: Column(
-        children: <Widget>[
-          const Center(
-            child: Text("First Details"),
-          ),
-          TextButton(
-              onPressed: () {
-              },
-              child: const Text("NAVIGATE")),
-        ],
-      ),
+    return Scaffold(
+      appBar: AppBar(title: const Text('First details')),
+      body: SizedBox(
+        child: Column(
+          children: <Widget>[
+            Center(
+              child: Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Text(data),
+              ),
+            ),
+            TextButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                child: const Text("RETURN LIST")),
+          ],
+        ),
+      )
     );
+
+
   }
 }

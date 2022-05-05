@@ -1,8 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:routing_example/src/screens/error.dart';
+import 'package:routing_example/src/screens/first_details.dart';
 import 'package:routing_example/src/screens/first_list.dart';
 import 'package:routing_example/src/screens/home.dart';
+import 'package:routing_example/src/screens/second_details.dart';
 import 'package:routing_example/src/screens/second_list.dart';
 
 class RouteGenerator {
@@ -17,9 +19,23 @@ class RouteGenerator {
         return MaterialPageRoute(
           builder: (_) => const FirstListScreen(),
         );
+      case '/firstdetail':
+        if (args is String) {
+          return MaterialPageRoute(builder: (_) => FirstDetails(data: args));
+        }
+        return MaterialPageRoute(
+          builder: (_) => const ErrorPage(),
+        );
       case '/secondlist':
         return MaterialPageRoute(
           builder: (_) => const SecondListScreen(),
+        );
+      case '/seconddetail':
+        if (args is String) {
+          return MaterialPageRoute(builder: (_) => SecondDetails(data: args));
+        }
+        return MaterialPageRoute(
+          builder: (_) => const ErrorPage(),
         );
 
       default:

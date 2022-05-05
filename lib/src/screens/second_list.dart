@@ -12,17 +12,32 @@ class SecondListScreen extends StatelessWidget {
           ListTile(
             title: const Text("One"),
             subtitle: const Text("one"),
-            onTap: () => {},
+            onTap: () => {
+              Navigator.of(context).pushNamed(
+                '/seconddetail',
+                arguments: 'One',
+              )
+            },
           ),
           ListTile(
             title: const Text("Two"),
             subtitle: const Text("two"),
-            onTap: () => {},
+            onTap: () => {
+              Navigator.of(context).pushNamed(
+                '/seconddetail',
+                arguments: 'Two',
+              )
+            },
           ),
           ListTile(
             title: const Text("Three"),
             subtitle: const Text("three"),
-            onTap: () => {},
+            onTap: () => {
+              Navigator.of(context).pushNamed(
+                '/seconddetail',
+                arguments: 'Three',
+              )
+            },
           )
         ],
       ),
