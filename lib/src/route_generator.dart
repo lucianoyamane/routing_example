@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:routing_example/src/screens/error.dart';
 import 'package:routing_example/src/screens/first_details.dart';
@@ -37,7 +36,6 @@ class RouteGenerator {
         return MaterialPageRoute(
           builder: (_) => const ErrorPage(),
         );
-
       default:
       // If there is no such named route in the switch statement, e.g. /third
         return MaterialPageRoute(
